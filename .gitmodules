@@ -1,3 +1,6 @@
 [submodule "wallpapers/nordic-wallpapers"]
 	path = wallpapers/nordic-wallpapers
 	url = https://github.com/linuxdotexe/nordic-wallpapers.git
+[submodule "awesome/awesome-wm-widgets"]
+	path = awesome/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets.git

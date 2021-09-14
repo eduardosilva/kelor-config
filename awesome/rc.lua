@@ -21,6 +21,7 @@ require("awful.hotkeys_popup.keys")
 -- Load Debian menu entries
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -233,6 +234,10 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
 --            mykeyboardlayout,
 --            wibox.widget.systray(),
+            batteryarc_widget({
+                show_current_level = true,
+                arc_thickness = 1,
+            }), 
             mytextclock,
 --            s.mylayoutbox,
         },
