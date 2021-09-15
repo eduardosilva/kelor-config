@@ -1,6 +1,8 @@
 /*
 !.gitignore
+!.zshrc
+!/comption.conf
 !/alacritty/
 !/awesome/
 !/wallpapers/
-!/comption.conf
+!/zsh/
