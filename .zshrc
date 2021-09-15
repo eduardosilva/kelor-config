@@ -9,6 +9,8 @@ fi
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 export TERM="xterm-256color"
+export VIMINIT='let $MYVIMRC="~/.config/.vimrc" | source $MYVIMRC'
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
