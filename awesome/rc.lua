@@ -14,6 +14,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local net_widgets = require("net_widgets")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -234,6 +236,11 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
 --            mykeyboardlayout,
 --            wibox.widget.systray(),
+            net_widgets.indicator({
+--                interfaces  = {"br-65ba4ad366d5", "enp2s0", "lo", "wlp3s0", "wlx30b5c21fcdb4"},
+                interfaces  = {"wlx30b5c21fcdb4"},
+
+            }),
             batteryarc_widget({
                 show_current_level = true,
                 arc_thickness = 1,

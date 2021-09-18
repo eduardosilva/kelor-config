@@ -10,3 +10,6 @@
 [submodule "zsh/powerlevel10k"]
 	path = zsh/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "/home/eduardo/.config/awesome/net_widgets"]
+	path = /home/eduardo/.config/awesome/net_widgets
+	url = https://github.com/pltanton/net_widgets.git
