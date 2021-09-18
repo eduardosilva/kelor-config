@@ -16,6 +16,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local net_widgets = require("net_widgets")
 
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -24,6 +25,7 @@ require("awful.hotkeys_popup.keys")
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -234,6 +236,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            volume_widget({ type = 'vertical_bar'}),
 --            mykeyboardlayout,
 --            wibox.widget.systray(),
             net_widgets.indicator({
@@ -407,7 +410,12 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+    -- Volume shurtcuts
+    awful.key({ modkey }, "]", function() volume_widget:inc() end),
+    awful.key({ modkey }, "[", function() volume_widget:dec() end),
+    awful.key({ modkey }, "\\", function() volume_widget:toggle() end)
+
 )
 
 -- Bind all key numbers to tags.
