@@ -1,0 +1,20 @@
+# HISTORY OPTIONS ###################
+
+# Don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# Append to the history file, don't overwrite it
+HISTFILE=~/.histfile
+HISTSIZE=100000
+HISTFILESIZE=2000000
+
+# GENERAL UI ########################
+bindkey -e
+
+# Enable autocd
+setopt auto_cd
+
+autoload -U colors && colors
+autoload -U compinit
+zstyle ':completion:*' menu select
+

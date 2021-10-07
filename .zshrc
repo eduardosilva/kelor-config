@@ -8,14 +8,7 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-export TERM="xterm-256color"
-export VIMINIT='let $MYVIMRC="~/.config/.vimrc" | source $MYVIMRC'
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/eduardo/.zshrc'
@@ -34,24 +27,14 @@ source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# asdf config
-. $HOME/.asdf/asdf.sh
 
-# config
-setopt auto_cd
-
-autoload -U colors && colors
-autoload -U compinit
-zstyle ':completion:*' menu select
+source ~/.config/.shells/defaults
+source ~/.config/.shells/functions
+source ~/.config/.shells/exports
+source ~/.config/.shells/alias
+source ~/.config/.shells/prompt
+source ~/.config/.shells/git
 
 
-
-# alias
-alias ls='ls -lah --color=auto'
-alias grep='grep --color'
-alias mv='mv -iv'
-alias cp='cp -iv'
-alias rm='rm -iv'
-alias g='git'
 
 neofetch
