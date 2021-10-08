@@ -1,0 +1,4 @@
+# get current branch name
+function branchName {
+    git branch | grep -Po "(^\*\s)\K(.*)"
+}
