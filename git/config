@@ -16,3 +16,5 @@
 	discard = !git reset --hard $@ && git clean -fd
 [submodule]
 	recurse = true
+[core]
+	editor = vim
