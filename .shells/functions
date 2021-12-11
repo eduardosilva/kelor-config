@@ -7,3 +7,10 @@ function branchName {
 function root {
     cd $(git rev-parse --show-toplevel)
 }
+
+# extract column from a tabular output
+# https://blog.developer.atlassian.com/ten-tips-for-wonderful-bash-productivity/
+
+function col {
+    awk -v col=$1 '{print $col}'
+}
