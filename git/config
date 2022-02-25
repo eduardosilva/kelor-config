@@ -18,3 +18,7 @@
 	recurse = true
 [core]
 	editor = vim
+[push]
+	default = current
+[rebase]
+	autosquash = true
