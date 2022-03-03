@@ -14,6 +14,7 @@
 	; list commits showing changed files
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	discard = !git reset --hard $@ && git clean -fd
+	unstage = reset HEAD --
 [submodule]
 	recurse = true
 [core]
