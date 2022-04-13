@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Eduardo Silva
-	email = eduardo.lour.silva@gmail.com[core]
+	email = eduardo.lour.silva@gmail.com
 	editor = vim
 
 [alias]
