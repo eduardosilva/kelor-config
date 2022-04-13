@@ -5,3 +5,4 @@ alias cp='cp -iv'
 alias rm='rm -iv'
 alias g='git'
 alias python=python3
+alias d='dotnet'
