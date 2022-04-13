@@ -36,5 +36,4 @@ source ~/.config/.shells/prompt
 source ~/.config/.shells/git
 
 
-
 neofetch
