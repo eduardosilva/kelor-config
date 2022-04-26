@@ -44,6 +44,7 @@ let mapleader = " "
 
 set clipboard=unnamed
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,6 +68,10 @@ set autoindent
 
 set hlsearch
 set incsearch
+
+" Ignore case in the search
+set ignorecase
+
 set ruler
 
 set spell
