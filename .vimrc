@@ -72,6 +72,9 @@ set incsearch
 " Ignore case in the search
 set ignorecase
 
+" case-sensitive if search contains an uppercase character
+set smartcase
+
 set ruler
 
 set spell
