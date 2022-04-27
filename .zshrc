@@ -34,6 +34,7 @@ source ~/.config/.shells/exports
 source ~/.config/.shells/alias
 source ~/.config/.shells/prompt
 source ~/.config/.shells/git
+source ~/.config/.shells/apps 
 
 
 neofetch
